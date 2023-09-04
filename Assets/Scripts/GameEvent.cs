@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class GameEvent : MonoBehaviour
 {
+    public GameObject Speed;
+    public float animSpeed = 2.0f;
+    public Animator animator;
     public float fadeDuration = 1f;
     public float displayImageDuration = 1f;
     public GameObject player;
-    public CanvasGroup sleepBackgroundImageCanvasGroup;
+    public CanvasGroup showerBackgroundImageCanvasGroup;
 
-    bool m_IsPlayerAtBad;
+
+    bool m_IsPlayerAtBathroom;
     float m_Timer;
 
     void OnTriggerEnter(Collider other)
@@ -17,20 +21,20 @@ public class GameEvent : MonoBehaviour
         Debug.Log("GameEvent Trigger!!!!!!!");
         if (other.gameObject == player)
         {
-            m_IsPlayerAtBad = true;
+            m_IsPlayerAtBathroom = true;
         }
     }
 
     void Update()
     {
-        if (m_IsPlayerAtBad)
+        if (m_IsPlayerAtBathroom)
         {
-            EndLevel(sleepBackgroundImageCanvasGroup);
+            doEvent(showerBackgroundImageCanvasGroup);
         }
     }
 
 
-    void EndLevel(CanvasGroup imageCanvasGroup) 
+    void doEvent(CanvasGroup imageCanvasGroup) 
     {
         m_Timer += Time.deltaTime;
 
@@ -39,6 +43,8 @@ public class GameEvent : MonoBehaviour
         if (m_Timer > fadeDuration + displayImageDuration)
         {
             imageCanvasGroup.alpha = 0;
+            animator.speed = animSpeed;
+            Speed.gameObject.SetActive(true);
         }
     }
 }
