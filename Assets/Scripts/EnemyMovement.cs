@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject target;
 
     int m_CurrentWaypointIndex;
-    float m_followDistance = 20f;
+    float m_followDistance = 5f;
 
     void Start()
     {
