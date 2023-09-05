@@ -28,7 +28,7 @@ public class PlayTime : MonoBehaviour
         m_playTimer = false;
         if (!caught)
         {
-            if(m_fastestPlayTime > m_timer)
+            if(m_fastestPlayTime > m_timer || !m_hasRecord)
             {
                 Save();
             }        
