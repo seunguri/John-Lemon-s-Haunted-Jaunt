@@ -12,6 +12,7 @@ public class GameEnding : MonoBehaviour
     public CanvasGroup caughtBackgroundImageCanvasGroup;
     public AudioSource exitAudio;
     public AudioSource caughtAudio;
+    public PlayTime playTime;
 
     bool m_IsPlayerAtExit;
     bool m_IsPlayerCaught;
@@ -55,6 +56,8 @@ public class GameEnding : MonoBehaviour
         }
 
         m_Timer += Time.deltaTime;
+
+        playTime.Stop(doRestart);
 
         imageCanvasGroup.alpha = m_Timer / fadeDuration;
         
