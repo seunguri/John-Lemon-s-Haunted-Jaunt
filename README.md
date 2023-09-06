@@ -12,6 +12,12 @@ unity 튜토리얼과 5가지 기능을 추가 구현한 3D 스텔스 게임
 4. 타이머를 구현하여 게임시작부터 플레이 시간 표시
 5. PlayerPrefs을 이용한 최단시간 클리어 시간 기록
 
+<p>
+  <img src="https://github.com/seunguri/John-Lemon-s-Haunted-Jaunt/assets/52988414/cb6a79f5-6d9f-4b2d-95e6-518c6333f4b4" align="center" width="10%">
+  <img src="https://github.com/seunguri/John-Lemon-s-Haunted-Jaunt/assets/52988414/2bc19f76-174a-4498-ae9b-e0c94ec783fd" align="center" width="10%">
+</p>
+
+
 ###### Unity Tutorial
 
 1. 캐릭터 움직임을 위한 스크립트 작성
